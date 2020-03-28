@@ -1,8 +1,0 @@
-{
-  "name": "@dsaco/eslint-plugin-react",
-  "version": "0.0.1",
-  "main": "index.js",
-  "keywords": [],
-  "author": "dsaco",
-  "license": "ISC"
-}
