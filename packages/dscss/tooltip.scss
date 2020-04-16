@@ -1,0 +1,54 @@
+$ds-tooltip-size: 8px !default;
+$ds-tooltip-bg: rgba(0, 0, 0, 0.75) !default;
+$ds-tooltip-color: white !default;
+$ds-tooltip-attr: aria-label !default;
+.ds-tooltip {
+	display: block;
+	position: relative;
+	&:before,
+	&:after {
+		position: absolute;
+		visibility: hidden;
+		transition: transform 0.1s, opacity 0.1s;
+		opacity: 0;
+		z-index: 99999;
+	}
+	&:before {
+		display: inline-block;
+		background-color: $ds-tooltip-bg;
+		content: attr($ds-tooltip-attr);
+		bottom: 100%;
+		left: 50%;
+		transform: translate3d(-50%, 0, 0);
+		border-radius: 2px;
+		color: $ds-tooltip-color;
+		font-size: 12px;
+		padding: 6px 8px;
+		width: max-content;
+		min-width: 32px;
+		max-width: 200px;
+		text-align: center;
+	}
+	&:after {
+		content: '';
+		background-color: transparent;
+		border: $ds-tooltip-size/2 solid transparent;
+		border-top-color: $ds-tooltip-bg;
+		bottom: 100%;
+		left: 50%;
+		transform: translate3d(-50%, $ds-tooltip-size, 0);
+	}
+
+	&:hover {
+		&:before {
+			visibility: visible;
+			transform: translate3d(-50%, -$ds-tooltip-size, 0);
+			opacity: 1;
+		}
+		&:after {
+			visibility: visible;
+			transform: translate3d(-50%, 0, 0);
+			opacity: 1;
+		}
+	}
+}
