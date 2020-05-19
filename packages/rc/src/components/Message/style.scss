@@ -1,0 +1,44 @@
+.ds-message {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .ds-message-item {
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        transform-origin: left;
+        color: #333;
+        background-color: white;
+        // border-radius: 3px;
+        box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
+        padding: 0 12px;
+        height: 36px;
+        min-width: 64px;
+        font-size: 14px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        &.success {
+            border-left: 5px solid #52c41a;
+        }
+        &.info {
+            border-left: 5px solid #1890ff;
+        }
+        &.warning {
+            border-left: 5px solid #faad14;
+        }
+        &.error {
+            border-left: 5px solid #ff4d4f;
+        }
+        &.dark {
+            color: white;
+            background-color: #445159;
+        }
+    }
+}

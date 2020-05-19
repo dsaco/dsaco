@@ -1,12 +1,17 @@
 import React from 'react'
 
 import Button from '../components/Button';
+import Notice from '../components/Notice';
+import Message from '../components/Message';
+import lorem from 'lorem-ipsum';
 
 export default function App() {
     return (
         <>
-            <Button>what</Button>
-            <Button link>what</Button>
+            <Button onClick={() => {
+                Message.info(lorem().slice(0, 10))
+            }}>what</Button>
+            {/* <Button link>what</Button>
             <Button outline>what</Button>
             <Button disabled>what</Button>
             <hr />
@@ -23,7 +28,7 @@ export default function App() {
             <Button type="purple">what</Button>
             <Button type="purple" link rippleColor="rgba(128, 0, 128, .25)">what</Button>
             <Button type="purple" outline rippleColor="rgba(255, 0, 128, .25)">what</Button>
-            <Button type="purple" disabled>what</Button>
+            <Button type="purple" disabled>what</Button> */}
 
         </>
     )
