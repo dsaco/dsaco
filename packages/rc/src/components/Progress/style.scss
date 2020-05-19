@@ -1,0 +1,32 @@
+$ds-progress-bg: #29d !default;
+$ds-progress-shadow: #29d !default;
+
+.ds-progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	pointer-events: none;
+	// overflow: hidden;
+	& > div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: $ds-progress-bg;;
+		transition: 0.3s transform;
+		transform-origin: left;
+		animation: ds-progress-light 1s linear infinite alternate;
+	}
+}
+
+@keyframes ds-progress-light {
+	from {
+		box-shadow: 0 0 6px $ds-progress-shadow;
+	}
+	to {
+		box-shadow: 0 0 1px $ds-progress-shadow;
+	}
+}

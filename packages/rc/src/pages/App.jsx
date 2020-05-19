@@ -1,17 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 import Button from '../components/Button';
 import Notice from '../components/Notice';
 import Message from '../components/Message';
 import lorem from 'lorem-ipsum';
+import ProgressApi from '../components/Progress';
 
 export default function App() {
-    return (
-        <>
-            <Button onClick={() => {
-                Message.info(lorem().slice(0, 10))
-            }}>what</Button>
-            {/* <Button link>what</Button>
+	const [visible, set] = useState(false);
+	return (
+		<>
+			<Button
+				onClick={() => {
+					// Message.info(lorem().slice(0, 10));
+                    // set((prev) => !prev);
+                    ProgressApi.start();
+				}}
+			>
+				start
+			</Button>
+			<Button
+				onClick={() => {
+					// Message.info(lorem().slice(0, 10));
+                    // set((prev) => !prev);
+                    ProgressApi.done();
+				}}
+			>
+				done
+			</Button>
+			{/* <Button link>what</Button>
             <Button outline>what</Button>
             <Button disabled>what</Button>
             <hr />
@@ -29,7 +46,6 @@ export default function App() {
             <Button type="purple" link rippleColor="rgba(128, 0, 128, .25)">what</Button>
             <Button type="purple" outline rippleColor="rgba(255, 0, 128, .25)">what</Button>
             <Button type="purple" disabled>what</Button> */}
-
-        </>
-    )
+		</>
+	);
 }
