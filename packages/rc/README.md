@@ -25,10 +25,10 @@ import '@dsaco/rc/lib/styles.css'
 - [x] [Button](#Button)
 - [x] [Progress](#Progress)
 - [x] [Ripple](#)
+- [x] [Img](#Img)
 - [ ] [Switch](#)
 - [ ] [Pagination](#Pagination)
 - [ ] [Modal](#)
-- [ ] [Img](#Img)
 - [ ] Select
 - [ ] Input
 - [ ] tagsInput

@@ -1,11 +1,12 @@
 {
   "name": "@dsaco/rc",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "",
   "publishConfig": {
     "access": "public"
   },
   "main": "lib/index.js",
+  "repository": "https://github.com/dsaco/dsaco/tree/master/packages/rc",
   "scripts": {
     "start": "webpack-dev-server",
     "clean": "rimraf lib",
@@ -42,6 +43,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.6",
+    "@dsaco/rc": "^1.0.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.21",

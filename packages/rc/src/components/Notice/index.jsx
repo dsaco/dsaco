@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { Transition } from 'react-spring/renderprops';
+import { Transition } from 'react-spring/renderprops.cjs';
 
 const now = Date.now();
 let key = 1;
@@ -76,10 +76,12 @@ function getInst() {
 	if (noticeInstance) {
 		return noticeInstance;
 	} else {
-		const div = document.createElement('div');
-		div.className = 'ds-notification';
-		document.body.appendChild(div);
-		return (noticeInstance = ReactDOM.render(<Container />, div));
+		if (typeof document !== 'undefined') {
+			const div = document.createElement('div');
+			div.className = 'ds-notification';
+			document.body.appendChild(div);
+			return (noticeInstance = ReactDOM.render(<Container />, div));
+		}
 	}
 }
 

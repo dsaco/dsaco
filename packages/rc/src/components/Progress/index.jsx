@@ -71,9 +71,13 @@ function getInst() {
 	if (progressInstance) {
 		return progressInstance;
 	} else {
-		const div = document.createElement('div');
-		document.body.appendChild(div);
-		return (progressInstance = ReactDOM.render(<ProgressUi />, div));
+		if (typeof document !== 'undefined') {
+			const div = document.createElement('div');
+			document.body.appendChild(div);
+			return (progressInstance = ReactDOM.render(<ProgressUi />, div));
+		} else {
+			return {};
+		}
 	}
 }
 
