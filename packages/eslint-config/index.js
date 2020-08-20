@@ -1,7 +1,11 @@
 module.exports = {
 	rules: {
-		// 强制所有控制语句使用一致的括号风格
+		// 强制所有控制语句使用一致的括号风格, 当代码块只有一条语句时,也不允许省略大括号
 		curly: 2,
+		// 要求 Switch 语句中有 Default 分支
+		'default-case': 1,
+		// 要求使用 === 和 !==
+		eqeqeq: 1,
 		// 禁止在数组括号内出现空格
 		'array-bracket-spacing': 1,
 		// 要求箭头函数的参数使用圆括号
