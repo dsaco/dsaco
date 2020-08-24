@@ -1,0 +1,33 @@
+$ds-spacer: 1rem !default;
+$ds-spacers: (
+	0: 0,
+	1: 0.25 * $ds-spacer,
+	2: 0.5 * $ds-spacer,
+	3: $ds-spacer,
+	4: 1.5 * $ds-spacer,
+	5: 3 * $ds-spacer,
+);
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+	@each $size, $length in $ds-spacers {
+		.#{$abbrev}-#{$size} {
+			#{$prop}: $length !important;
+		}
+		.#{$abbrev}x-#{$size},
+		.#{$abbrev}l-#{$size} {
+			#{$prop}-left: $length !important;
+		}
+		.#{$abbrev}x-#{$size},
+		.#{$abbrev}r-#{$size} {
+			#{$prop}-right: $length !important;
+		}
+		.#{$abbrev}y-#{$size},
+		.#{$abbrev}t-#{$size} {
+			#{$prop}-top: $length !important;
+		}
+		.#{$abbrev}y-#{$size},
+		.#{$abbrev}b-#{$size} {
+			#{$prop}-bottom: $length !important;
+		}
+	}
+}
