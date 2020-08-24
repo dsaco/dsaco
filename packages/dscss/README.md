@@ -1,10 +1,20 @@
 ##### 安装
+
 ```
 npm i -S @dsaco/dscss
 ```
 
 ### tooltip.scss
+
+| 属性               | 功能                        | 默认值              |
+| ------------------ | --------------------------- | ------------------- |
+| \$ds-tooltip-size  | tooltip 与 container 的距离 | 8px                 |
+| \$ds-tooltip-bg    | 背景色                      | rgba(0, 0, 0, 0.75) |
+| \$ds-tooltip-color | 字体颜色                    | white               |
+| \$ds-tooltip-attr  | 展示的文字来自哪个属性      | aria-label          |
+
 ##### 引入
+
 ```
 // .scss
 // 默认值 8px rgba(0, 0, 0, 0.75) white aria-label;
@@ -17,13 +27,16 @@ $ds-tooltip-attr: data-title;
 // .html
 <span class="ds-tooltip" data-title="瑞秋·麦克亚当斯">name</span>
 ```
+
 ##### 方向
-- ds-tooltip: 上方(默认值)
-- ds-tooltip--bottom: 下方
-- ds-tooltip--left: 左方
-- ds-tooltip--right: 右方
+
+-   ds-tooltip: 上方(默认值)
+-   ds-tooltip--bottom: 下方
+-   ds-tooltip--left: 左方
+-   ds-tooltip--right: 右方
 
 ### spacing.scss
+
 ```
 // .scss
 // 默认值 1rem;
