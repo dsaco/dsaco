@@ -45,7 +45,7 @@ import '@dsaco/rc/lib/styles.css'
 
 
 属性 | 说明 | 类型 | 默认值
-- | - | - | -
+--- | --- | --- | ---
 type | 类型 | ripple、 | ripple
 theme | 主题 | primary、secondary | -
 link | 按钮背景透明 | boolean | false
