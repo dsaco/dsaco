@@ -29,9 +29,9 @@ $ds-tooltip-attr: data-title;
 
 ```html
 <span class="ds-tooltip" data-title="瑞秋·麦克亚当斯">上方(默认)</span>
-<span class="ds-tooltip bottom" data-title="瑞秋·麦克亚当斯">下边</span>
-<span class="ds-tooltip left" data-title="瑞秋·麦克亚当斯">左边</span>
-<span class="ds-tooltip right" data-title="瑞秋·麦克亚当斯">右边</span>
+<span class="ds-tooltip--bottom" data-title="瑞秋·麦克亚当斯">下边</span>
+<span class="ds-tooltip--left" data-title="瑞秋·麦克亚当斯">左边</span>
+<span class="ds-tooltip--right" data-title="瑞秋·麦克亚当斯">右边</span>
 ```
 ### spacing.scss
 

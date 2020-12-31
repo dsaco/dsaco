@@ -45,9 +45,10 @@ $ds-tooltip-attr: aria-label !default;
 	}
 }
 
-.ds-tooltip {
+.ds-tooltip,
+.ds-tooltip--top {
 	@extend .ds-tooltip-basic;
-	
+
 	&:before {
 		bottom: 100%;
 		left: 50%;
@@ -67,73 +68,78 @@ $ds-tooltip-attr: aria-label !default;
 			transform: translate3d(-50%, 0, 0);
 		}
 	}
+}
 
-	&.bottom {
-		&:before,
-		&:after {
-			top: 100%;
-			left: 50%;
-		}
-		&:before {
-			transform: translate3d(-50%, 0, 0);
-		}
-		&:after {
-			border-bottom-color: $ds-tooltip-bg;
-			transform: translate3d(-50%, -$ds-tooltip-size, 0);
-		}
-		&:hover {
-			&:before {
-				transform: translate3d(-50%, $ds-tooltip-size, 0);
-			}
-			&:after {
-				transform: translate3d(-50%, 0, 0);
-			}
-		}
+.ds-tooltip--left {
+	@extend .ds-tooltip-basic;
+
+	&:before,
+	&:after {
+		right: 100%;
+		top: 50%;
 	}
-
-	&.left {
-		&:before,
-		&:after {
-			right: 100%;
-			top: 50%;
-		}
-		&:before {
-			transform: translate3d(0, -50%, 0);
-		}
-		&:after {
-			border-left-color: $ds-tooltip-bg;
-			transform: translate3d($ds-tooltip-size, 50%, 0);
-		}
-		&:hover {
-			&:before {
-				transform: translate3d(-$ds-tooltip-size, -50%, 0);
-			}
-			&:after {
-				transform: translate3d(0, -50%, 0);
-			}
-		}
+	&:before {
+		transform: translate3d(0, -50%, 0);
 	}
-
-	&.right {
-		&:before,
-		&:after {
-			left: 100%;
-			top: 50%;
-		}
+	&:after {
+		border-left-color: $ds-tooltip-bg;
+		transform: translate3d($ds-tooltip-size, 50%, 0);
+	}
+	&:hover {
 		&:before {
-			transform: translate3d(0, -50%, 0);
-		}
-		&:after {
-			border-right-color: $ds-tooltip-bg;
 			transform: translate3d(-$ds-tooltip-size, -50%, 0);
 		}
-		&:hover {
-			&:before {
-				transform: translate3d($ds-tooltip-size, -50%, 0);
-			}
-			&:after {
-				transform: translate3d(0, -50%, 0);
-			}
+		&:after {
+			transform: translate3d(0, -50%, 0);
+		}
+	}
+}
+
+.ds-tooltip--bottom {
+	@extend .ds-tooltip-basic;
+
+	&:before,
+	&:after {
+		top: 100%;
+		left: 50%;
+	}
+	&:before {
+		transform: translate3d(-50%, 0, 0);
+	}
+	&:after {
+		border-bottom-color: $ds-tooltip-bg;
+		transform: translate3d(-50%, -$ds-tooltip-size, 0);
+	}
+	&:hover {
+		&:before {
+			transform: translate3d(-50%, $ds-tooltip-size, 0);
+		}
+		&:after {
+			transform: translate3d(-50%, 0, 0);
+		}
+	}
+}
+.ds-tooltip--right {
+	@extend .ds-tooltip-basic;
+
+	&:before,
+	&:after {
+		left: 100%;
+		top: 50%;
+	}
+	&:before {
+		transform: translate3d(0, -50%, 0);
+	}
+	&:after {
+		border-right-color: $ds-tooltip-bg;
+		transform: translate3d(-$ds-tooltip-size, -50%, 0);
+	}
+	&:hover {
+		&:before {
+			transform: translate3d($ds-tooltip-size, -50%, 0);
+		}
+		&:after {
+			transform: translate3d(0, -50%, 0);
 		}
 	}
 }
