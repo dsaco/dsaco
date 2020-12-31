@@ -49,3 +49,31 @@ $ds-spacer: 16px;
 <span class="my-4"></span>
 <span class="m-5"></span>
 ```
+
+### 多行省略css版本
+
+```css
+.ds-clamp {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+```
+
+### 渐变文字
+
+```css
+.ds-linear-text {
+	background: linear-gradient(
+		92.05deg,
+		#bca1f7 12.09%,
+		#e577b4 42.58%,
+		#ff7170 84.96%
+	);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-box-decoration-break: clone;
+}
+```
