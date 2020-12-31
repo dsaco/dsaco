@@ -30,7 +30,7 @@ $ds-tooltip-attr: aria-label !default;
 	&:after {
 		content: '';
 		background-color: transparent;
-		border: $ds-tooltip-size/2 solid transparent;
+		border: 4px solid transparent;
 	}
 
 	&:hover {
