@@ -15,7 +15,7 @@
     "build": "npm run clean && npm run lib && npm run style"
   },
   "keywords": [],
-  "author": "",
+  "author": "dsaco",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
