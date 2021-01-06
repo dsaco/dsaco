@@ -1,6 +1,6 @@
 {
   "name": "@dsaco/rc",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "",
   "publishConfig": {
     "access": "public"
@@ -48,5 +48,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-spring": "^8.0.27"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
   }
 }
