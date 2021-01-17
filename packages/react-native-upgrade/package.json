@@ -1,0 +1,24 @@
+{
+  "name": "@dsaco/react-native-upgrade",
+  "version": "1.0.4",
+  "description": "react-native upgrade util",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/dsaco/dsaco/tree/master/packages/react-native-upgrade",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "dsaco",
+  "license": "ISC",
+  "dependencies": {
+    "react-native": "^0.63.4"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  }
+}
