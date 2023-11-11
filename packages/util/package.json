@@ -14,10 +14,10 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "axios": "^1.2.1"
+    "axios": "^1.6.0"
   },
   "devDependencies": {
-    "axios": "^1.2.1",
+    "axios": "^1.6.0",
     "typescript": "^4.9.4"
   }
 }
